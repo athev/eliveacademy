@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ & FAQ | ELIVE ACADEMY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+                <span class="logo-text">ELIVE<br><small>ACADEMY</small></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Trang Chủ</a>
+                <a href="about.html">Về Chúng Tôi</a>
+                <a href="courses.html">Khóa Học</a>
+                <a href="about.html#giangvien">Giảng Viên</a>
+                <a href="index.html#hocvien">Học Viên Nói Gì</a>
+                <a href="courses.html#doanhnghiep">Đào Tạo Doanh Nghiệp</a>
+                <a href="courses.html#lichkhaigiang">Lịch Khai Giảng</a>
+                <a href="news.html">Blog</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary pulse-btn active">ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header" style="padding-top:150px; padding-bottom:80px">
+        <div class="container reveal fade-up text-center">
+            <h1>Bắt Đầu Hành Trình Thay Đổi Hôm Nay</h1>
+            <p>Một buổi tư vấn miễn phí 30 phút sẽ giúp bạn tìm ra đúng khóa học, đúng lộ trình cho mục tiêu của bạn — không có cam kết gì cả.</p>
+        </div>
+    </div>
+
+    <!-- Contact & Form Section -->
+    <section class="contact-section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="contact-wrapper highlight-card shadow-lg" style="display:flex; background:#fff; border-radius:20px; overflow:hidden; flex-wrap:wrap">
+                <!-- Info Side -->
+                <div class="contact-info bg-dark text-white p-5" style="flex: 1; min-width:300px; background: linear-gradient(135deg, var(--primary) 0%, #3a0d11 100%); padding: 50px;">
+                    <h3 style="color:#fff; margin-bottom: 20px; font-size: 2rem;">Thông Tin ELIVE</h3>
+                    <ul style="list-style:none; padding:0; margin-bottom: 40px; font-size: 1.1rem; line-height: 2;">
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-location-dot" style="margin-right: 15px; width: 20px;"></i> Tầng 15, Tòa ELIVE, Quận 1, TPHCM</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-phone" style="margin-right: 15px; width: 20px;"></i> Hotline: 1900 1234 56</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-envelope" style="margin-right: 15px; width: 20px;"></i> hello@eliveacademy.vn</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-clock" style="margin-right: 15px; width: 20px;"></i> Thứ 2 – Thứ 7 | 8:00 – 20:00</li>
+                    </ul>
+                    
+                    <h4 style="color:#fff; margin-bottom: 15px;">Kết Nối:</h4>
+                    <div class="social-links" style="font-size: 1.5rem; gap: 15px; display: flex;">
+                        <a href="#" style="color:#fff;"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" style="color:#fff;"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" style="color:#fff;"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" style="color:#fff;"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Form Side -->
+                <div class="contact-form p-5" style="flex: 1.5; min-width:350px; padding: 50px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.8rem;">Đăng Ký Tư Vấn / Test Năng Lực</h3>
+                    <form action="#" method="POST" class="auth-form" onsubmit="event.preventDefault(); alert('Đăng ký thành công! Hệ thống ELIVE ACADEMY sẽ liên hệ với bạn trong 24h.');">
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-weight: 600; margin-bottom: 5px; display: block;">Họ và tên *</label>
+                            <input type="text" name="name" placeholder="Nhập họ và tên của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-weight: 600; margin-bottom: 5px; display: block;">Số điện thoại *</label>
+                            <input type="tel" name="phone" placeholder="Nhập số điện thoại (Zalo)" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-weight: 600; margin-bottom: 5px; display: block;">Email</label>
+                            <input type="email" name="email" placeholder="Nhập địa chỉ email" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-weight: 600; margin-bottom: 5px; display: block;">Bạn đang ở vị trí nào?</label>
+                            <select name="position" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;">
+                                <option value="">-- Chọn vị trí --</option>
+                                <option value="nhan-vien">Nhân viên / Người đi làm bình thường</option>
+                                <option value="quan-ly">Quản lý cấp trung (Team Lead / Trưởng phòng)</option>
+                                <option value="giam-doc">Giám đốc / Lãnh đạo cấp cao</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-weight: 600; margin-bottom: 5px; display: block;">Bạn quan tâm đến khóa học nào?</label>
+                            <select name="course" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;">
+                                <option value="">-- Chọn khóa học --</option>
+                                <option value="giao-tiep">Giao tiếp Tự tin – Nói Để Được Lắng Nghe</option>
+                                <option value="viet-noi">Viết & Nói Thuyết Phục Trong Công Việc</option>
+                                <option value="lanh-dao">Lãnh Đạo Bằng Giao Tiếp – Dẫn Dắt Đội Nhóm</option>
+                                <option value="thuyet-trinh">Thuyết Trình Cao Cấp – Nói Với Sức Mạnh</option>
+                                <option value="ceo-branding">Thương Hiệu Cá Nhân Lãnh Đạo – CEO Branding</option>
+                                <option value="vip-11">Khóa 1:1 VIP – Cá Nhân Hóa</option>
+                                <option value="tu-van">Cần tư vấn chọn lộ trình phù hợp</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 25px;">
+                            <label style="font-weight: 600; margin-bottom: 5px; display: block;">Ghi chú thêm (Tùy chọn)</label>
+                            <textarea name="note" rows="3" placeholder="Vấn đề lớn nhất bạn đang gặp phải là gì?" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary p-full pulse-btn" style="font-size: 1.1rem;">ĐĂNG KÝ TƯ VẤN MIỄN PHÍ</button>
+                        <p style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 15px;">🔒 Thông tin của bạn được bảo mật tuyệt đối. Chúng tôi không gửi spam.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" style="padding: 100px 0; background: var(--bg-light);">
+        <div class="container section-header reveal fade-up">
+            <span class="section-tag red-tag">FAQ</span>
+            <h2>Bạn Đang Thắc Mắc Điều Gì?</h2>
+        </div>
+        <div class="container reveal fade-up" style="max-width: 800px;">
+            <div class="faq-item" style="background:#fff; padding:25px; margin-bottom:15px; border-radius:10px; box-shadow:var(--shadow-sm); border-left:4px solid var(--primary);">
+                <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--primary); margin-right:10px;"></i> Tôi rất bận, không có nhiều thời gian. Liệu có khóa học phù hợp không?</h4>
+                <p style="color:var(--text-muted); line-height:1.6;">Có. Các khóa học tại ELIVE được tổ chức linh hoạt 2–3 buổi/tuần vào buổi tối hoặc cuối tuần, phù hợp với người đi làm bận rộn. Ngoài ra, hình thức Online qua Zoom cho phép bạn học từ bất kỳ đâu mà không cần đến lớp.</p>
+            </div>
+            <div class="faq-item" style="background:#fff; padding:25px; margin-bottom:15px; border-radius:10px; box-shadow:var(--shadow-sm); border-left:4px solid var(--primary);">
+                <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--primary); margin-right:10px;"></i> Tôi không phải người hay nói, có học được không?</h4>
+                <p style="color:var(--text-muted); line-height:1.6;">Đây chính xác là nhóm đối tượng mà ELIVE thiết kế chương trình. Nhiều học viên thành công nhất của chúng tôi từng rất ngại nói. Phương pháp thực chiến của ELIVE giúp bạn tiến bộ từng bước, không ép buộc.</p>
+            </div>
+            <div class="faq-item" style="background:#fff; padding:25px; margin-bottom:15px; border-radius:10px; box-shadow:var(--shadow-sm); border-left:4px solid var(--primary);">
+                <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--primary); margin-right:10px;"></i> Sau khóa học, tôi có được hỗ trợ tiếp không?</h4>
+                <p style="color:var(--text-muted); line-height:1.6;">Có. Sau khi tốt nghiệp, bạn gia nhập Cộng đồng Học viên ELIVE — nơi tiếp tục được hỗ trợ, luyện tập cùng cộng đồng và tham gia các sự kiện networking miễn phí.</p>
+            </div>
+            <div class="faq-item" style="background:#fff; padding:25px; margin-bottom:15px; border-radius:10px; box-shadow:var(--shadow-sm); border-left:4px solid var(--primary);">
+                <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--primary); margin-right:10px;"></i> Có đào tạo nội bộ (Doanh nghiệp) không?</h4>
+                <p style="color:var(--text-muted); line-height:1.6;">Được. Chương trình ELIVE FOR BUSINESS được thiết kế từ nhóm 10 người trở lên. Chúng tôi sẽ khảo sát nhu cầu và xây dựng chương trình phù hợp với đặc thù doanh nghiệp của bạn.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section" style="padding: 0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4602324217112!2d106.6974163152605!3d10.776019492321852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f385570472f%3A0x1787491df0ed8d6a!2sLandmark%2081!5e0!3m2!1sen!2s!4v1683266224155!5m2!1sen!2s" width="100%" height="450" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer same as index.html -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+                    <span class="logo-text">ELIVE<br><small>ACADEMY</small></span>
+                </a>
+                <p>Học Viện Đào Tạo Kỹ Năng. Chúng tôi tin rằng kỹ năng là thứ đầu tư sinh lãi cao nhất trong cuộc đời. Mỗi người đều có thể tốt hơn — bắt đầu từ hôm nay.</p>
+                <div class="social-links" style="margin-top:20px;">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Khóa Học</h4>
+                <ul>
+                    <li><a href="courses.html">Giao tiếp Tự tin</a></li>
+                    <li><a href="courses.html">Viết & Nói Thuyết Phục</a></li>
+                    <li><a href="courses.html">Lãnh đạo bằng Giao tiếp</a></li>
+                    <li><a href="courses.html">Thuyết trình Cao cấp</a></li>
+                    <li><a href="courses.html">CEO Branding VIP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Thông tin</h4>
+                <ul>
+                    <li><a href="about.html">Về Chúng Tôi</a></li>
+                    <li><a href="about.html#giangvien">Đội Ngũ Giảng Viên</a></li>
+                    <li><a href="courses.html#lichkhaigiang">Lịch Khai Giảng</a></li>
+                    <li><a href="news.html">Blog & Kiến Thức</a></li>
+                    <li><a href="index.html#hocvien">Học Viên Nói Gì</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên Hệ</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> Tầng 15, Tòa ELIVE, Quận 1, TPHCM</li>
+                    <li><i class="fa-solid fa-phone"></i> Hotline: 1900 1234 56</li>
+                    <li><i class="fa-solid fa-envelope"></i> hello@eliveacademy.vn</li>
+                    <li><i class="fa-solid fa-clock"></i> T2 – T7 | 8:00 – 20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 ELIVE ACADEMY. Bảo lưu mọi quyền. | Chính sách bảo mật | Điều khoản sử dụng</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -14,15 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     if(mobileBtn && navLinks) {
         mobileBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = '#fff';
-            navLinks.style.padding = '20px';
-            navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            navLinks.classList.toggle('mobile-active');
+        });
+        
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('mobile-active');
+            });
         });
     }
 
@@ -115,6 +114,71 @@ document.addEventListener('DOMContentLoaded', () => {
             else topBtn.classList.remove('visible');
         });
         topBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    // 8. Form Handling (API Integration)
+    const forms = document.querySelectorAll('.auth-form');
+    forms.forEach(form => {
+        // Remove old inline onsubmit if present
+        form.removeAttribute('onsubmit');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'ĐANG XỬ LÝ...';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Determine endpoint based on page/form context
+            const endpoint = window.location.pathname.includes('course-detail') ? '/api/register' : '/api/contact';
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    alert('Đăng ký thành công! Hệ thống ELIVE ACADEMY sẽ liên hệ với bạn trong 24h.');
+                    form.reset();
+                } else {
+                    alert('Có lỗi xảy ra: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Không thể kết nối đến máy chủ. Vui lòng thử lại sau.');
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
+        });
+    });
+    // 9. Centralized Floating Widgets Injection
+    const widgetsHTML = `
+        <div class="floating-widgets">
+            <a href="https://zalo.me/yourphone" target="_blank" class="widget zallo" title="Chat Zalo"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="https://m.me/yourpage" target="_blank" class="widget messenger" title="Chat Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href="tel:1900123456" class="widget phone" title="Gọi Điện"><i class="fa-solid fa-phone-volume"></i></a>
+        </div>
+        <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+    `;
+    document.body.insertAdjacentHTML('beforeend', widgetsHTML);
+
+    // Refresh Back to Top logic after injection
+    const topBtnMoved = document.querySelector('.back-to-top');
+    if(topBtnMoved) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) topBtnMoved.classList.add('visible');
+            else topBtnMoved.classList.remove('visible');
+        });
+        topBtnMoved.addEventListener('click', (e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
