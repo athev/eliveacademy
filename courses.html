@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Khóa Học | ELIVE ACADEMY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+                <span class="logo-text">ELIVE<br><small>ACADEMY</small></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Trang Chủ</a>
+                <a href="about.html">Về Chúng Tôi</a>
+                <a href="courses.html" class="active">Khóa Học</a>
+                <a href="news.html">Tin Tức</a>
+                <a href="contact.html">Liên Hệ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary pulse-btn">Lịch Khai Giảng</a>
+                <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container reveal fade-up">
+            <h1>Chương Trình Đào Tạo</h1>
+            <p>Hệ thống khóa học từ cơ bản đến nâng cao được cập nhật mới nhất 2026.</p>
+        </div>
+    </div>
+
+    <!-- Courses Categories -->
+    <section class="courses" style="padding-top: 50px;">
+        <div class="container">
+            <div class="course-tabs" id="courseTabs">
+                <button class="tab-btn active" data-target="all">Tất Cả Khóa Học</button>
+                <button class="tab-btn" data-target="offline">Thực Chiến Trực Tiếp</button>
+                <button class="tab-btn" data-target="online">Online Tương Tác 1:1</button>
+            </div>
+
+            <div class="course-grid active" id="all-courses">
+                <!-- Course 1 -->
+                <div class="course-card detailed reveal fade-up">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Giao tiếp">
+                    </div>
+                    <div class="course-info">
+                        <h3>Giao Tiếp Ứng Xử Chuyên Nghiệp</h3>
+                        <p class="course-desc">Sửa lỗi rụt rè, nói lan man. Giúp bạn tự tin mở lời, duy trì cuộc trò chuyện và xử lý từ chối.</p>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 8 Buổi</span>
+                        </div>
+                        <a href="course-detail.html" class="btn btn-primary outline-hover p-full">Đăng Ký Khóa Này</a>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card detailed reveal fade-up" style="transition-delay: 0.1s;">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thuyết trình">
+                    </div>
+                    <div class="course-info">
+                        <h3>Kĩ Năng Phản Biện Sắc Bén</h3>
+                        <p class="course-desc">Rèn luyện tư duy logic, phản xạ nhanh và đưa ra luận điểm chặt chẽ trong các cuộc tranh luận.</p>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 10 Buổi</span>
+                        </div>
+                        <a href="course-detail.html" class="btn btn-primary outline-hover p-full">Đăng Ký Khóa Này</a>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card detailed reveal fade-up" style="transition-delay: 0.2s;">
+                    <div class="course-img">
+                        <img src="https://images.unsplash.com/photo-1475721025871-729487c0ffbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Master">
+                    </div>
+                    <div class="course-info">
+                        <h3>Nghệ Thuật Thuyết Trình Trước Đám Đông</h3>
+                        <p class="course-desc">Dành cho cấp bậc Manager trở lên cần trình bày dự án, truyền cảm hứng tại các hội nghị lớn.</p>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 6 Buổi Thực Chiến</span>
+                        </div>
+                        <a href="course-detail.html" class="btn btn-dark p-full">Đăng Ký Khóa Này</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-bg" style="border-top:0;">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+                    <span class="logo-text">ELIVE<br><small>ACADEMY</small></span>
+                </a>
+            </div>
+            <div class="footer-col">
+                <h4>Kết Nối</h4>
+                <ul class="contact-info">
+                   <li><i class="fa-solid fa-phone"></i> 1900 1234 56</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container"><p>&copy; 2026 ELIVE ACADEMY.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
